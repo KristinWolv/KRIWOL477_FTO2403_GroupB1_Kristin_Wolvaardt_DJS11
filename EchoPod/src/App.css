@@ -1,24 +1,35 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+
+/* General resets and global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App {
   text-align: center;
+  padding: 20px;
 }
 
+/* Logo styles */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 40px;
+  margin: 10px;
 }
 
-@keyframes logo-spin {
+.logo.react {
+  animation: react-spin infinite 20s linear;
+}
+
+@keyframes react-spin {
   from {
     transform: rotate(0deg);
   }
@@ -27,16 +38,178 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Header styles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #222;
 }
 
-.card {
-  padding: 2em;
+/* Home component styles */
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-.read-the-docs {
-  color: #888;
+li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+li img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+li h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+li p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Button styles */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ShowDetails component styles */
+.show-details {
+  padding: 20px;
+}
+
+.show-details img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.show-details h1 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.show-details p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Season and Episode styles */
+.season {
+  margin-top: 20px;
+}
+
+.season h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.episode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.episode p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.episode button {
+  margin-left: 10px;
+}
+
+/* Favourites component styles */
+.favourites {
+  padding: 20px;
+}
+
+.favourites h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.favourite-item {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.favourite-item p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* AudioPlayer component styles */
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.audio-player button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.audio-player button:hover {
+  color: #ddd;
+}
+
+.audio-player input[type='range'] {
+  width: 70%;
+  margin: 0 10px;
+}
+
+.audio-player p {
+  margin: 0;
+  font-size: 1rem;
 }
