@@ -3,7 +3,6 @@
 import create from 'zustand';
 import axios from 'axios';
 
-// Define the API endpoint
 const API_BASE_URL = 'https://podcast-api.netlify.app';
 
 const useStore = create((set, get) => ({
